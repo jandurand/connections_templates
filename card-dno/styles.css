@@ -1,0 +1,106 @@
+#page-bd h2 {
+	color: #005628; 
+	font-family: Arial; 
+	font-size: 25px; 
+	font-weight: bold;
+	margin: 0 0 20px 0;
+}
+
+#page-bd .description {
+	color: #000000; 
+	font-family: Arial; 
+	font-size: 12px; 
+	font-weight: normal;
+	padding: 0 0 10px 0;
+	margin: 0 0 10px 0;
+	border-bottom: 1px solid #E3E3E3;
+}
+
+#bd-search {
+	float: right;
+}
+
+#bd-search-input {
+	height: 24px;
+	width: 150px;	
+	margin-bottom: 15px;
+	padding-left: 4px;
+	padding-right: 20px;
+	border: 1px solid #DDDDDD;
+	background: #FFFFFF url("/news/wp-content/connections_templates/card-dno/images/search_20x20.png") no-repeat right center;
+}
+
+#bd-search-button {
+	display: none;
+}
+
+#bd-category {
+	height: 24px;
+	min-width: 175px;	
+	margin-bottom: 15px;
+}
+
+#bd-category option {
+	height: 24px;
+}
+
+#page-bd div.bio {
+	width: 440px;
+	line-height: 130%;
+}
+#page-bd div.bio p {
+	word-wrap: break-word;
+	line-height: 130%;
+}
+
+#page-bd div.cn-alphaindex {
+	margin-bottom: 15px;
+}
+
+div.bd-page-control {
+	margin: 10px 0;
+	padding: 10px 0;
+	border-top: 1px solid #e3e3e3;
+	border-bottom: 1px solid #e3e3e3;
+	text-align: center;
+}
+
+div.bd-page-control .page-number {
+	color: #005628;
+	margin: 0 4px;;
+}
+
+div.bd-page-control .current-page-number {
+	color: #FFFFFF;
+	background-color: #005628;
+	padding: 3px
+}
+
+div.bd-page-control a.page-number:hover {
+	color: #dd5e6a;
+	text-decoration: none;
+}
+
+span.address-block {
+	line-height: 120%;
+}
+
+div.gradient-msg {
+	background: rgb(161,209,171); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(161,209,171,1) 0%, rgba(0,110,46,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(161,209,171,1)), color-stop(100%,rgba(0,110,46,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(161,209,171,1) 0%,rgba(0,110,46,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(161,209,171,1) 0%,rgba(0,110,46,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(161,209,171,1) 0%,rgba(0,110,46,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(161,209,171,1) 0%,rgba(0,110,46,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1d1ab', endColorstr='#006e2e',GradientType=0 ); /* IE6-9 */
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 10px;
+	margin-bottom: 15px;
+}
