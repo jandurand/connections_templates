@@ -141,8 +141,8 @@ if ( ! class_exists('DNOCard') )
 		 */		
 		public function modifyPhoneNumber( $phoneNumber ) {
 			
-			$search = array( 'Work Phone', 'Home Phone', ' Phone');
-			$replace = array( 'Tel', 'Tel', '' );
+			$search = array( 'Work Phone', 'Home Phone', ' Phone', 'Work Fax');
+			$replace = array( 'Tel', 'Tel', '', 'Fax' );
 			$phoneNumber->name = trim( str_ireplace( $search, $replace, $phoneNumber->name ) );
 			
 			return $phoneNumber;
