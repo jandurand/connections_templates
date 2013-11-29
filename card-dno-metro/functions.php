@@ -1,7 +1,7 @@
 <?php
-if ( ! class_exists('DNOCard') )
+if ( ! class_exists('DNOCardMetro') )
 {
-	class DNOCard
+	class DNOCardMetro
 	{
 		/**
 		 * Load the template filters.
@@ -12,15 +12,15 @@ if ( ! class_exists('DNOCard') )
 		public function __construct()
 		{
 			// Update the permitted shortcode attribute the user may use and overrride the template defaults as needed.
-			add_filter( 'cn_list_atts_permitted-card-dno' , array(&$this, 'initShortcodeAtts') );
-			add_filter( 'cn_list_atts-card-dno' , array(&$this, 'initTemplateOptions') );
-			add_filter( 'cn_list_before-card-dno', array(&$this, 'displayBeforeList'), 10, 2 );
-			add_filter( 'cn_list_after-card-dno', array(&$this, 'displayAfterList'), 10, 2 );
+			add_filter( 'cn_list_atts_permitted-card-dno-metro' , array(&$this, 'initShortcodeAtts') );
+			add_filter( 'cn_list_atts-card-dno-metro' , array(&$this, 'initTemplateOptions') );
+			add_filter( 'cn_list_before-card-dno-metro', array(&$this, 'displayBeforeList'), 10, 2 );
+			add_filter( 'cn_list_after-card-dno-metro', array(&$this, 'displayAfterList'), 10, 2 );
 			add_filter( 'query_vars', array(&$this, 'registerQueryVariables') );
 			add_filter( 'cn_phone_number', array(&$this, 'modifyPhoneNumber' ) );
 			
 			// Enqueue javscript
-			wp_enqueue_script( 'card-dno', home_url( '/wp-content/connections_templates/card-dno/template.js' ) );
+			wp_enqueue_script( 'card-dno-metro', home_url() . "/wp-content/connections_templates/card-dno-metro/template.js" );
 		}
 
 		/**
@@ -182,10 +182,10 @@ if ( ! class_exists('DNOCard') )
 		
 		private function getSearchControl() {
 			if ( !$this->atts['enable_search'] ) return '';
-			$background_url = home_url( '/wp-content/connections_templates/card-dno/images/search_20x20.png' ); 
-			$output = "<div id='bd-search'>";
-			$output .= "<input type='text' id='bd-search-input' name='cn-s' value='{$this->atts['search_terms']}' placeholder='Search' style='background: #ffffff url(\"$background_url\") no-repeat right center;'/>";
-			$output .= "<input type='submit' value='' id='bd-search-button' />";
+			
+			$output = "<div id='bd-search' class='input-control text'>";
+			$output .= "<input type='text' id='bd-search-input' name='cn-s' value='{$this->atts['search_terms']}' placeholder='Search'/>";
+			$output .= "<button type='submit' value='' id='bd-search-button' class='btn-search' />";
 			$output .= "</div>";
 			
 			return $output;
@@ -270,6 +270,6 @@ if ( ! class_exists('DNOCard') )
 	}
 	
 	//print_r($this);
-	$this->DNOCard = new DNOCard();
+	$this->DNOCardMetro = new DNOCardMetro();
 }
 ?>

@@ -18,14 +18,6 @@
 
 #bd-search {
 	float: right;
-	zoom: 1;
-}
-#bd-search:before, #bd-search:after {
-	content: ""; 
-	display: table;
-}
-#bd-search:after {
-	clear: both;
 }
 
 #bd-search-input {
@@ -58,6 +50,10 @@
 #page-bd div.bio p {
 	word-wrap: break-word;
 	line-height: 130%;
+}
+
+#page-bd div.bio div {
+	margin-bottom: 10px;
 }
 
 #page-bd div.cn-alphaindex {

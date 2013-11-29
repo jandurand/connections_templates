@@ -1,11 +1,11 @@
 jQuery(document).ready(function() {
 	var	bd_category = jQuery("#bd-category");
-	var bd_search_input = jQuery("#bd-search-input");
+	var bd_search = jQuery("#bd-search");
 	var bd_search_button = jQuery("#bd-search-button");
-		
+	
 	bd_category.change(function() {
 		// Clear search	
-		bd_search_input.val('');
+		bd_search.val('');
 		jQuery(this.form).submit();
 	});
 	
